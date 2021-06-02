@@ -5,10 +5,9 @@ const app = express();
 
 import PostRoutes from "./routes/posts.js";
 
-app.use("/posts", PostRoutes);
-
 app.use(express.urlencoded());
 app.use(cors());
+app.use("/posts", PostRoutes);
 
 const CONNECTION_URI =
   "mongodb+srv://singhutkarshh:cenation.database@cluster0.o9j4o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
